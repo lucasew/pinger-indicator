@@ -58,7 +58,6 @@ func onStart() {
 		err = cmd.Wait()
 		if err != nil {
 			log.Error(err.Error())
-			continue
 		}
 		log.Verbose(0, "%s: ecode: %d latencia: %d\n", cmd.Args, cmd.ProcessState.ExitCode(), latency)
 		if cmd.ProcessState.ExitCode() == 0 {
